@@ -1,0 +1,109 @@
+<div class="min-h-screen bg-[#f8f5e6] p-4 md:p-8">
+    <!-- Header -->
+    <div class="max-w-5xl mx-auto mb-8 flex items-center justify-between">
+        <div>
+            <h1 class="text-3xl font-bold text-primary">Upload New Sermon</h1>
+            <p class="text-primary/60 mt-1">Share the word with the congregation.</p>
+        </div>
+        <button (click)="goBack()" class="text-primary/60 hover:text-primary transition-colors">
+            <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Main Card -->
+    <div
+        class="max-w-5xl mx-auto bg-white rounded-[30px] shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[600px]">
+
+        <!-- Left: Upload Zone -->
+        <div
+            class="w-full md:w-5/12 bg-primary/5 p-8 flex flex-col justify-center items-center border-b md:border-b-0 md:border-r border-primary/10 relative group cursor-pointer transition-colors hover:bg-primary/10">
+            <input type="file" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" accept="audio/*" />
+
+            <div
+                class="w-24 h-24 rounded-full bg-white shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="fa-solid fa-cloud-arrow-up text-4xl text-[#c8a962]"></i>
+            </div>
+
+            <h3 class="text-xl font-bold text-primary mb-2">Upload Audio</h3>
+            <p class="text-center text-primary/50 text-sm max-w-[200px] mb-8">
+                Drag and drop your audio file here, or click to browse.
+            </p>
+
+            <div class="text-xs text-primary/40 font-medium uppercase tracking-wider">
+                Supported: MP3, WAV, AAC
+            </div>
+        </div>
+
+        <!-- Right: Details Form -->
+        <div class="w-full md:w-7/12 p-8 md:p-12 flex flex-col">
+            <h2 class="text-xl font-bold text-primary mb-6">Sermon Details</h2>
+
+            <div class="space-y-6 flex-1">
+                <!-- Title -->
+                <div>
+                    <label class="block text-xs font-bold text-primary/70 uppercase tracking-wider mb-2">Sermon
+                        Title</label>
+                    <input type="text" placeholder="e.g. The Mystery of Faith"
+                        class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-[#c8a962] focus:ring-1 focus:ring-[#c8a962] transition-all placeholder:text-gray-400">
+                </div>
+
+                <!-- Preacher & Date Row -->
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex-1">
+                        <label
+                            class="block text-xs font-bold text-primary/70 uppercase tracking-wider mb-2">Preacher</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-primary/30"></i>
+                            <input type="text" placeholder="Select or type name"
+                                class="w-full bg-gray-50 border border-gray-200 rounded-xl pl-10 pr-4 py-3 text-primary focus:outline-none focus:border-[#c8a962] focus:ring-1 focus:ring-[#c8a962] transition-all placeholder:text-gray-400">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3">
+                        <label class="block text-xs font-bold text-primary/70 uppercase tracking-wider mb-2">Date
+                            Preached</label>
+                        <input type="date"
+                            class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-[#c8a962] focus:ring-1 focus:ring-[#c8a962] transition-all text-sm">
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div>
+                    <label
+                        class="block text-xs font-bold text-primary/70 uppercase tracking-wider mb-2">Description</label>
+                    <textarea rows="4" placeholder="Brief summary of the message..."
+                        class="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-primary focus:outline-none focus:border-[#c8a962] focus:ring-1 focus:ring-[#c8a962] transition-all placeholder:text-gray-400 resize-none"></textarea>
+                </div>
+
+                <!-- Category Tags -->
+                <div>
+                    <label
+                        class="block text-xs font-bold text-primary/70 uppercase tracking-wider mb-2">Category</label>
+                    <div class="flex flex-wrap gap-2">
+                        <button
+                            class="px-4 py-1.5 rounded-full bg-[#c8a962] text-white text-sm font-medium shadow-sm">Sunday
+                            Service</button>
+                        <button
+                            class="px-4 py-1.5 rounded-full bg-gray-100 text-primary/60 text-sm font-medium hover:bg-gray-200 transition-colors">Bible
+                            Study</button>
+                        <button
+                            class="px-4 py-1.5 rounded-full bg-gray-100 text-primary/60 text-sm font-medium hover:bg-gray-200 transition-colors">Revival</button>
+                        <button
+                            class="w-8 h-8 rounded-full border border-dashed border-primary/30 flex items-center justify-center text-primary/40 hover:text-primary hover:border-primary transition-colors">
+                            <i class="fa-solid fa-plus text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-end gap-4">
+                <button (click)="goBack()"
+                    class="px-6 py-3 rounded-full text-primary/60 font-bold hover:text-primary hover:bg-gray-50 transition-colors">Cancel</button>
+                <button
+                    class="px-8 py-3 rounded-full bg-[#c8a962] text-white font-bold shadow-lg hover:bg-[#b59650] hover:shadow-xl transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-upload"></i> Publish Sermon
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

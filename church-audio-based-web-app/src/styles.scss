@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #3f2c00;
+  --secondary-color: #fff9e8;
+}
+
+body {
+  background-color: lighten(#fff9e8, 2.5); // Using the secondary for the lightened background
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
